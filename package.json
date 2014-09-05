@@ -1,0 +1,13 @@
+{
+  "name": "Boilerplate",
+  "version": "0.0.0",
+  "description": "",
+  "author": "clintonhalpin@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "connect-livereload": "^0.4.0",
+    "express": "^4.8.8",
+    "gulp": "^3.8.7",
+    "tiny-lr": "^0.1.1"
+  }
+}
