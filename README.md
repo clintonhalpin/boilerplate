@@ -4,8 +4,8 @@
 npm i
 bower i
 
-# Build Directorys
-gulp build
+# Build dist 
+gulp dist
 
 # Start Express,liverelead,Sass,Browserify @ localhost:4000
 gulp 
