@@ -47,6 +47,7 @@ gulp.task('browserify', function() {
     }
   }))
   .pipe(concat('bundle.js'))
+  .pipe(uglify())
   .pipe(gulp.dest('./dist/js'))
 });
 
