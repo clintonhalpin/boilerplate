@@ -1,12 +1,12 @@
 # Boilerplate ( Angular )
 
 ```shell
-$ npm i
-$ bower i
+npm i
+bower i
 
 # Build Directorys
-$ gulp build
+gulp build
 
 # Start Express,liverelead,Sass,Browserify @ localhost:4000
-$ gulp 
+gulp 
 ```
