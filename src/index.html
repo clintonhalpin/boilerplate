@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Boilerplate</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
         <link rel="stylesheet" href="css/app.css">
     </head>
-    <body>
-      <p>Holler @ Me Boilerplate</p>
-      <script src="js/app.js"></script>
+    <body ng-controller="mainCtrl as main">
+      <p>{{ main.message }}</p>
+      <script src="js/bundle.js"></script>
     </body>
 </html>
