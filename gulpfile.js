@@ -45,7 +45,7 @@ gulp.task('browserify', function() {
         exports: 'uiRouter'
       }
     }
-  }))
+  }).on('error', gutil.log))
   .pipe(concat('bundle.js'))
   .pipe(uglify())
   .pipe(gulp.dest('./dist/js'))
