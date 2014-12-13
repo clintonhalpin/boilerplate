@@ -1,12 +1,15 @@
 # Boilerplate ( Angular )
+=
+Just some boilerplate code that I don't like to write all the time.
 
-```shell
-npm i
-bower i
-
-# Build dist 
-gulp dist
-
-# Start Express,liverelead,Sass,Browserify @ localhost:4000
-gulp 
+### Getting started
 ```
+npm start
+```
+Run the app with
+
+```
+gulp dist
+gulp
+```
+
