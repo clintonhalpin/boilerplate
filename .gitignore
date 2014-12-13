@@ -3,3 +3,4 @@ node_modules
 .sass-cache
 src/bower_components
 .DS_Store
+npm-debug.log
