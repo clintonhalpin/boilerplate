@@ -1,8 +1,7 @@
 'use strict';
 
-var angular = require('angular');
-var uiRouter = require('uiRouter');
-var mainCtrl = require('../components/ctrl.mainCtrl.js');
+require('./../bower_components/angular/angular.min.js');
+require('./../bower_components/angular-ui-router/release/angular-ui-router.min.js');
 
-var app = angular.module('app', [ 'ui.router' ]);
-app.controller('mainCtrl', mainCtrl, []);
+var app = angular.module('app', [ 'ui.router']);
+app.controller('mainCtrl', [require('../components/ctrl.mainCtrl.js')]);

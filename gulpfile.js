@@ -34,18 +34,7 @@ gulp.task('livereload', function() {
 
 gulp.task('browserify', function() {
   gulp.src(['src/js/app.js'])
-  .pipe(browserify({
-    shim: {
-      angular: {
-        path: './src/bower_components/angular/angular.min.js',
-        exports: 'angular'
-      },
-      uiRouter: {
-        path: './src/bower_components/angular-ui-router/release/angular-ui-router.min.js',
-        exports: 'uiRouter'
-      }
-    }
-  }).on('error', gutil.log))
+  .pipe(browserify({}).on('error', gutil.log))
   .pipe(concat('bundle.js'))
   .pipe(uglify())
   .pipe(gulp.dest('./dist/js'))
