@@ -9,7 +9,8 @@ angular.module('app', [
 
 .config(["$urlRouterProvider", "$stateProvider", require('./routes') ])
 
-.controller('TestController', [ '$scope', require('./../components/ctrl.mainCtrl.js') ])
+.factory('TestFactory', [ require('./../components/factory.TestFactory.js') ])
+.controller('TestController', [ '$scope', 'TestService', require('./../components/ctrl.mainCtrl.js') ])
 
 // Hold on to your butts, start things up 
 angular.element(document).ready(function() {

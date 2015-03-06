@@ -1,3 +1,3 @@
-module.exports = function($scope) {
-    $scope.message = "Yolo Baby"
+module.exports = function($scope, TestService) {
+    $scope.message = TestService.get(); 
 }
