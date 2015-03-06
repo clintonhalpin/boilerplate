@@ -1,5 +1,3 @@
-function mainCtrl() {
-  this.message = "Holler @ Me Boilerplate"
+module.exports = function($scope) {
+    $scope.message = "Yolo Baby"
 }
-
-module.exports = mainCtrl;

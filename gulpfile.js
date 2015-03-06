@@ -47,8 +47,8 @@ gulp.task('browserify', function() {
        errorHandler: onError
   })) 
   .pipe(browserify({}).on('error', gutil.log))
-  .pipe(concat('bundle.js'))
-  .pipe(uglify())
+//  .pipe(concat('bundle.js'))
+//  .pipe(uglify())
   .pipe(gulp.dest('./dist/js'))
 });
 
@@ -84,7 +84,7 @@ gulp.task('sass', function() {
 });
 
 gulp.task('mv-html', function() {
-  gulp.src('src/index.html')
+  gulp.src('src/**/*.html')
   .pipe(gulp.dest('dist/'));
 });
 
