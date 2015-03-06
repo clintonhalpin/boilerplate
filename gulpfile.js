@@ -9,13 +9,11 @@ var gulp = require('gulp'),
     tinylr = require('tiny-lr')(),
     concat = require('gulp-concat'),
     clean = require('gulp-clean'),
+    browserify = require('browserify'),
+    transform = require('vinyl-transform'),
+    sourcemaps = require('gulp-sourcemaps'),
     port = 4000,
     lrport = 9088;
-
-var browserify = require('browserify');
-var transform = require('vinyl-transform');
-var sourcemaps = require('gulp-sourcemaps');
-
 
 var onError = function(err) {
     console.error(err.message);
@@ -47,8 +45,8 @@ gulp.task('browserify', function() {
        errorHandler: onError
   })) 
   .pipe(browserify({}).on('error', gutil.log))
-//  .pipe(concat('bundle.js'))
-//  .pipe(uglify())
+  .pipe(concat('bundle.js'))
+  .pipe(uglify())
   .pipe(gulp.dest('./dist/js'))
 });
 
