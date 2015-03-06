@@ -1,9 +1,17 @@
 module.exports = function() {
+    var value = "Hey I'm a value and I'm being returned from a factory!";
+
     var get = function() {
-        return "Hey I'm a value and I'm being returned from a factory!"
+        return value 
+    }
+
+    var update = function(req) {
+        value = req
+        return req 
     }
 
     return {
-        get: get
+        get: get,
+        update: update
     }
 }
