@@ -1,7 +1,8 @@
-module.exports = function($stateProvider) {
+module.exports = function($urlRouterProvider, $stateProvider) {
+    $urlRouterProvider.otherwise("/home");
     $stateProvider
         .state('index', {
-          url: "/",
+          url: "/home",
           templateUrl: "components/view.index.html",
           controller: 'TestController'
     });

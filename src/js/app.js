@@ -5,12 +5,14 @@ require('./../bower_components/angular-ui-router/release/angular-ui-router.min.j
 
 angular.module('app', [
     'ui.router'
-]);
+])
 
-.config(["$stateProvider", require('./routes.js') ])
+.config(["$urlRouterProvider", "$stateProvider", require('./routes') ])
 
 .controller('TestController', [ '$scope', require('./../components/ctrl.mainCtrl.js') ])
 
 // Hold on to your butts, start things up 
-angular.bootstrap(document, 'app')
+angular.element(document).ready(function() {
+    angular.bootstrap(document, ['app'])
+});
 
