@@ -4,7 +4,7 @@ var gulp = require('gulp'),
     gutil = require('gulp-util'),
     path = require('path'),
     uglify = require('gulp-uglify'),
-    sass = require('gulp-sass'),
+    less = require('gulp-less'),
     connectLivereload = require('connect-livereload'),
     tinylr = require('tiny-lr')(),
     concat = require('gulp-concat'),
@@ -72,12 +72,9 @@ gulp.task('javascript', function () {
     .pipe(gulp.dest('./dist/js/'));
 });
 
-
-
-
-gulp.task('sass', function() {
-  gulp.src('src/scss/**/*.scss')
-  .pipe(sass({style: 'compressed' }).on('error', gutil.log))
+gulp.task('less', function() {
+  gulp.src('src/less/**/*.less')
+  .pipe(less({style: 'compressed' }).on('error', gutil.log))
   .pipe(gulp.dest('dist/css/'))
 });
 
@@ -90,8 +87,8 @@ gulp.task('watch', function() {
   gulp.watch(['src/**/*.js'], [
     'javascript'
   ]);
-  gulp.watch(['src/**/*.scss'], [
-    'sass'
+  gulp.watch(['src/**/*.less'], [
+    'less'
   ]);
   gulp.watch(['src/**/*.html'], [
     'mv-html'
@@ -99,7 +96,7 @@ gulp.task('watch', function() {
   gulp.watch('./dist/**').on('change', notifyLiveReload);
 });
 
-gulp.task('dist', ['sass', 'mv-html', 'javascript'], function() {
+gulp.task('dist', ['less', 'mv-html', 'javascript'], function() {
   console.log( "Dist built @ " + new Date());
 });
 

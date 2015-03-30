@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "browserify": "^9.0.3",
+    "gulp-less": "^3.0.2",
     "gulp-plumber": "^0.6.6",
     "gulp-sourcemaps": "^1.5.0",
     "vinyl-transform": "^1.0.0"
